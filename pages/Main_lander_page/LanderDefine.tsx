@@ -1,4 +1,8 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from "react";
+
+
 
 function LanderDefine() {
   
@@ -14,13 +18,28 @@ function LanderDefine() {
         const res=await fetch(`https://api.github.com/users/${user}`)
         const data= await res.json();
         console.log(data,"data is coming from github api ");
+        if(data.message==="Not Found")
+        {
+         toast.error("user is not available",{position:"top-center",autoClose:3000 })
+        }else{
+          toast.success("user is found",{position:"top-center",autoClose:3000 })
+        }
         
       } catch (error) {
+        if(error)
+        {
+          toast.error("username is not found ",{position:"top-center",autoClose:3000})
+        }
         console.log(error);
       }
      }
   }
    
+ 
+
+
+  
+  
 
   return (
     <div className="  rounded-md text-center font-medium  my-5 m-3 ">

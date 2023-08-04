@@ -4,7 +4,7 @@ function LanderDefine() {
   
   
   const [user, setUser] = useState("")
-  const handleSubmit = async (e)=>{
+  const handleSubmit = async(e)=>{
     e.preventDefault();
      if(!user)
      {
@@ -14,6 +14,7 @@ function LanderDefine() {
         const res=await fetch(`https://api.github.com/users/${user}`)
         const data= await res.json();
         console.log(data,"data is coming from github api ");
+        
       } catch (error) {
         console.log(error);
       }
@@ -30,7 +31,7 @@ function LanderDefine() {
             type="text"
             name=""
             id=" "
-            className="p-2 text-center "
+            className="p-2 text-center rounded-md "
             placeholder="user.name  "
             value={user}
             onChange={(e)=>setUser(e.target.value)}

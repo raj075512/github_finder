@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 
 
-function LanderDefine() {
+function LanderDefine({setUserData,setLoading}) {
   
   
   const [user, setUser] = useState("")
@@ -12,6 +12,8 @@ function LanderDefine() {
     e.preventDefault();
      if(!user)
      {
+      setLoading(true);
+      setUserData(null);
        return ;
      }else{
       try {
@@ -20,11 +22,11 @@ function LanderDefine() {
         console.log(data,"data is coming from github api ");
         if(data.message==="Not Found")
         {
-         toast.error("user is not available",{position:"top-center",autoClose:3000 })
+         toast.error("user is not available",{position:"bottom-center", autoClose:3000 })
         }else{
           toast.success("user is found",{position:"top-center",autoClose:3000 })
         }
-        
+        setUserData(data);
       } catch (error) {
         if(error)
         {
@@ -32,7 +34,12 @@ function LanderDefine() {
         }
         console.log(error);
       }
-     }
+        
+      finally{
+        setLoading(false);
+        
+      }
+      }
   }
    
  

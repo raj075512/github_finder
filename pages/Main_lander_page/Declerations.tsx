@@ -4,7 +4,7 @@ import Repo_list from './Repo_list'
 
 function Declerations({userData}) {
   return (
-    <div className='grid grid-cols-1 gap-4  justify-between m-4  font-medium border-2 border-pink-300   relative rounded-md '>
+    <div className='grid grid-cols-1 gap-4  justify-between m-4  font-medium    relative rounded-md '>
 
         
         <div className="p-4 bg-blue-200 text-blue-800 grid grid-cols-3 grid-rows-3 rounded-md gap-3">
@@ -15,9 +15,8 @@ function Declerations({userData}) {
     <span className='flex center '>Repos: {userData.public_repos} </span></div>
     <div className="row-span-2 bg-blue-100 rounded p-4">
        
-      linkedin: {userData.blog ?<a href={userData.blog} >{userData.blog} </a>:"not specified" }
-    <span className='flex center '>linkedin: {userData.blog ?<a href={userData.blog} >{userData.blog} </a>:"not specified" }   </span>
-    <span className='flex center '>linkedin: {userData.blog ?<a href={userData.blog} >{userData.blog} </a>:"not specified" } </span>
+      linkedin/Blog: {userData.blog ?<a href={userData.blog} >{userData.blog} </a>:"not specified" }
+    
     <span className='flex center '>Email: {userData.email ?<a href={userData.email} >{userData.email} </a>:"not specified" } </span>
     
     </div>

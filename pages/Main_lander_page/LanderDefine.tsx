@@ -23,7 +23,7 @@ function LanderDefine({setUserData,setLoading}) {
       try {
         const res=await fetch(`https://api.github.com/users/${user}`)
         const data= await res.json();
-     
+       
         if(data.message==="Not Found")
         {
          toast.error("user is not available",{position:"bottom-center", autoClose:3000 })
@@ -36,7 +36,7 @@ function LanderDefine({setUserData,setLoading}) {
         {
           toast.error("username is not found ",{position:"top-center",autoClose:3000})
         }
-       
+        console.log(error);
       }
         
       finally{

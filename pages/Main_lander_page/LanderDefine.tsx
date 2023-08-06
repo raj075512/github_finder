@@ -1,11 +1,15 @@
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from "react";
 
+import {Loader2} from 'lucide-react';
 
+export const Icons = {
+  spinner: Loader2,
+};
 
 function LanderDefine({setUserData,setLoading}) {
-  
+
   
   const [user, setUser] = useState("")
   const handleSubmit = async(e)=>{
@@ -19,7 +23,7 @@ function LanderDefine({setUserData,setLoading}) {
       try {
         const res=await fetch(`https://api.github.com/users/${user}`)
         const data= await res.json();
-        console.log(data,"data is coming from github api ");
+     
         if(data.message==="Not Found")
         {
          toast.error("user is not available",{position:"bottom-center", autoClose:3000 })
@@ -32,7 +36,7 @@ function LanderDefine({setUserData,setLoading}) {
         {
           toast.error("username is not found ",{position:"top-center",autoClose:3000})
         }
-        console.log(error);
+       
       }
         
       finally{
@@ -65,6 +69,8 @@ function LanderDefine({setUserData,setLoading}) {
           <button className="bg-green-400 px-4 rounded-md py-2  border-2  text-bold text-white text-center center m-2 hover:bg-green-300 hover:transition-shadow hover:text-black">
             search
           </button>
+          
+
         </form>
       </div>
     </div>

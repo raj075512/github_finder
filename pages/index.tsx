@@ -2,6 +2,7 @@ import Header from "./Main_lander_page/Header";
 import LanderDefine from "./Main_lander_page/LanderDefine";
 import Declarations from "./Main_lander_page/Declerations";
 import {useState } from "react"
+import Repo_list from "./Main_lander_page/Repo_list";
 
 export default function Home() {
   // before decleration of data in decleration section adding check for these data //
@@ -12,11 +13,12 @@ export default function Home() {
 
   return (
     <>
-      <main className=" flex flex-col bg-green-100 rounded-md  relative m-5 md:m-10 sm:m-0">
+      <main className=" flex flex-col bg-green-100 rounded-md  relative m-10 md:m-2 sm:m-0">
         <Header />
         <LanderDefine setUserData={(res)=>setUserData(res)} setLoading={setLoading} />
       </main>
      { userData &&  <Declarations userData={userData}  />}
+    
     </>
   );
 }

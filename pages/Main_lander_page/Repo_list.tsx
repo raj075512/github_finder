@@ -46,14 +46,14 @@ function Repo_list({ reposUrl }) {
     <div className="flex flex-col  rounded-md  relative m-10 md:m-2 sm:m-0 ">
       <span className="center text-center text-green-500  font-medium text-2xl">
         Repositories
-        {loader && <Icons.spinner className=" animate-spin" />}
+        {loader && <Icons.spinner className=" animate-spin align-center  m-auto color-red text-center justify-center" />}
       </span>
         
     
     
 
 <div>
-      { repos.map((repo)=>(
+      {  repos.map((repo)=>(
                 
                 <tr key={repo.id} className=" flex  justify-evenly m-4 bg-gray-200 center text-center m-1 rounded-md border-1  ">
           <div className="flex flex-col ">

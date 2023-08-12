@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Image from "next/image";
+
 import  {BsFillXSquareFill } from "react-icons/bs"
 
 function HistoryDeclare() {
@@ -39,7 +39,7 @@ function HistoryDeclare() {
         {  userHis &&   userHis.map((data) => (
           <tr key={data.id} className="flex flex-row rounded-md bg-green-300 m-1  gap-5 ">
             <div className="flex m-1  flex-row justify-between">
-                 <div > <Image src={data.avatar_url} className="rounded-full h-10 m-auto" alt="" /> 
+                 <div > <img src={data.avatar_url} className="rounded-full h-10 m-auto" alt="" /> 
                  </div>
                  <div className="flex flex-col text-center  justify-center ">
                      <span className="text-center text-xs font-medium ">

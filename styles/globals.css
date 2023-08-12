@@ -9,3 +9,20 @@
   text-decoration: none;
   outline: none;
 }
+
+
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-track {
+	background: #cfcdcd;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3c3b3b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

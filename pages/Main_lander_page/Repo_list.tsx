@@ -26,7 +26,6 @@ function Repo_list({ reposUrl }) {
          {
            
          throw new Error(repoData.message);
-          
         }
         setRepos(repoData);
       } catch (error) {
@@ -41,6 +40,7 @@ function Repo_list({ reposUrl }) {
        fetchRepo();
   }, [reposUrl, toast]);
 
+
   
   return (
     <div className="flex flex-col  rounded-md  relative m-10 md:m-2 sm:m-0 ">
@@ -49,8 +49,6 @@ function Repo_list({ reposUrl }) {
         {loader && <Icons.spinner className=" animate-spin align-center  m-auto color-red text-center justify-center" />}
       </span>
         
-    
-    
 
 <div>
       {  repos.map((repo)=>(

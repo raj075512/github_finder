@@ -1,6 +1,6 @@
 import React from 'react'
 import Repo_list from './Repo_list'
-
+import Image from 'next/image'
 
 function Declerations({userData}) {
   return (
@@ -10,7 +10,7 @@ function Declerations({userData}) {
         <div className="p-4 bg-blue-200 text-blue-800 grid grid-cols-3 grid-rows-3 rounded-md gap-3">
     <div className="bg-blue-100 rounded p-5 text-red-600 font-medium">Followers: {userData.followers}
     <span className='flex center '>following: {userData.following}</span></div>
-    <div className="row-span-2 bg-blue-100 rounded p-5"> <img src={userData.avatar_url} alt="avatar" className='rounded-full h-40 m-auto' /> </div>
+    <div className="row-span-2 bg-blue-100 rounded p-5">  {userData.id? <Image src={userData.avatar_url} alt="avatar" className='rounded-full h-40 m-auto' /> : <a href="/cross.png"></a> }</div>
     <div className="bg-blue-100 rounded p-3 font-medium text-red-500">Public_gists: {userData.public_gists}
     <span className='flex center '>Repos: {userData.public_repos} </span></div>
     <div className="row-span-2 bg-blue-100 rounded p-4">

@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <main className=" flex flex-col bg-green-100 rounded-md  relative m-10 md:m-2 sm:m-0">
+      <main className=" flex flex-col bg-green-100 rounded-md   relative m-10 md:m-2 sm:m-0">
         <Header />
         <LanderDefine setUserData={(res)=>setUserData(res)} setLoading={setLoading} />
       </main>

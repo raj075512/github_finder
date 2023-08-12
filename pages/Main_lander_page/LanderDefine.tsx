@@ -66,7 +66,7 @@ function LanderDefine({ setUserData, setLoading }) {
 
   return (
     <div className="  rounded-md text-center font-medium  my-5 m-3 ">
-      <p className="font-medium text-2xl ">Search for github users</p>
+      <p className="font-medium text-2xl ">Search : github users</p>
       <div className="">
         <form action="" className="text-black  font-sm" onSubmit={handleSubmit}>
           <input

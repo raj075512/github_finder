@@ -1,10 +1,12 @@
 
-
 # GitHub User Finder
 
 
 
 
+![Uploading Screenshot (69).png…]()
+![Screenshot (70)](https://github.com/raj075512/github_finder/assets/91281709/ec61857d-f12f-48a2-97e6-36444bc34674)
+![Uploading Screenshot (71).png…]()
 
 GitHub User Finder is a user-friendly web application that allows you to quickly find and explore GitHub users. It provides you with detailed information about users, including their contact email (if available) and a list of their repositories. Whether you're looking to connect with fellow developers or explore interesting projects, GitHub User Finder has you covered.
 
@@ -40,7 +42,6 @@ GitHub User Finder is a user-friendly web application that allows you to quickly
 
 6. **User Repositories**: Click on the "Repositories" tab to see a list of all repositories owned by the user.
 7. **get the privious search history**
-   ![Uploading Screenshot (71).png…]()![Uploading Screenshot (70).png…]()
 
 
 
